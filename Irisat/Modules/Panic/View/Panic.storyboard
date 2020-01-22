@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Panic View Controller-->
+        <scene sceneID="a2a-LS-Wz7">
+            <objects>
+                <viewController storyboardIdentifier="PanicViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3EC-Nl-WYo" customClass="PanicViewController" customModule="Irisat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QdJ-A3-aHb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IB0-AF-L48" customClass="CircularProgressBar" customModule="Irisat" customModuleProvider="target">
+                                <rect key="frame" x="16" y="298" width="382" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="8W0-hg-Oge"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IB0-AF-L48" firstAttribute="leading" secondItem="eyF-C7-18j" secondAttribute="leading" constant="16" id="Ixv-QR-6nA"/>
+                            <constraint firstItem="eyF-C7-18j" firstAttribute="trailing" secondItem="IB0-AF-L48" secondAttribute="trailing" constant="16" id="PG5-nM-a5m"/>
+                            <constraint firstItem="IB0-AF-L48" firstAttribute="centerY" secondItem="QdJ-A3-aHb" secondAttribute="centerY" id="X1l-I0-6n6"/>
+                            <constraint firstItem="IB0-AF-L48" firstAttribute="centerX" secondItem="QdJ-A3-aHb" secondAttribute="centerX" id="Z5X-sf-k0E"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eyF-C7-18j"/>
+                    </view>
+                    <connections>
+                        <outlet property="panicView" destination="IB0-AF-L48" id="gQz-u1-ylg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nqn-aa-vUJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101" y="-23"/>
+        </scene>
+    </scenes>
+</document>

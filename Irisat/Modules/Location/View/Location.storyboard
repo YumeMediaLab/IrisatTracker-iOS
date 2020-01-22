@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Location View Controller-->
+        <scene sceneID="pig-MI-MjQ">
+            <objects>
+                <viewController storyboardIdentifier="LocationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SN5-UA-gee" customClass="LocationViewController" customModule="Irisat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OuK-Zq-cHH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UJI-VW-agM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="768"/>
+                            </mapView>
+                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="79i-mZ-B9p">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iBi-lu-gvU">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="I need assistance">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="assistanceButton:" destination="SN5-UA-gee" eventType="touchUpInside" id="15I-On-ID3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="iBi-lu-gvU" secondAttribute="bottom" id="EMu-fP-mdw"/>
+                                    <constraint firstItem="iBi-lu-gvU" firstAttribute="leading" secondItem="79i-mZ-B9p" secondAttribute="leading" id="eAn-ir-4UU"/>
+                                    <constraint firstItem="iBi-lu-gvU" firstAttribute="top" secondItem="79i-mZ-B9p" secondAttribute="top" id="eWg-j7-QkZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="iBi-lu-gvU" secondAttribute="trailing" id="khx-xH-ysF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Wiu-k3-1fQ" firstAttribute="trailing" secondItem="UJI-VW-agM" secondAttribute="trailing" id="9JH-qt-RMr"/>
+                            <constraint firstItem="UJI-VW-agM" firstAttribute="top" secondItem="Wiu-k3-1fQ" secondAttribute="top" id="RRU-3S-aNj"/>
+                            <constraint firstItem="Wiu-k3-1fQ" firstAttribute="bottom" secondItem="UJI-VW-agM" secondAttribute="bottom" constant="50" id="Uri-7o-DxG"/>
+                            <constraint firstItem="79i-mZ-B9p" firstAttribute="top" secondItem="UJI-VW-agM" secondAttribute="bottom" id="eA1-ie-CQE"/>
+                            <constraint firstItem="79i-mZ-B9p" firstAttribute="bottom" secondItem="Wiu-k3-1fQ" secondAttribute="bottom" id="gdR-L8-TQF"/>
+                            <constraint firstItem="UJI-VW-agM" firstAttribute="leading" secondItem="Wiu-k3-1fQ" secondAttribute="leading" id="sV2-LU-2Mm"/>
+                            <constraint firstItem="79i-mZ-B9p" firstAttribute="trailing" secondItem="Wiu-k3-1fQ" secondAttribute="trailing" id="w2z-GD-KvY"/>
+                            <constraint firstItem="79i-mZ-B9p" firstAttribute="leading" secondItem="Wiu-k3-1fQ" secondAttribute="leading" id="zBc-gQ-VDD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Wiu-k3-1fQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="assistanceButton" destination="iBi-lu-gvU" id="bcw-BN-gtC"/>
+                        <outlet property="mapView" destination="UJI-VW-agM" id="I2g-HL-PRS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Pf-uf-nh1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108.69565217391305" y="87.723214285714278"/>
+        </scene>
+    </scenes>
+</document>
